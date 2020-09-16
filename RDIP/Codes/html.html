@@ -108,7 +108,16 @@ function getFunction(){
             show.type="button";
             show.value="Get Correct Sentence(s)";
             show.className="btn btn-primary";
-            
+            if(shuffleWords(e,sentence)){
+                imp.innerHTML="Correct Answer";
+                imp.style.color="green";
+            }
+            else{
+                imp.innerHTML="Wrong Answer!";
+                d.append(show);
+                show.style.display="inline-block";
+                imp.style.color="red";
+            }
             this.style.display="none";
             d.append(imp);
             imp.style.display="block";
@@ -206,7 +215,16 @@ function getFunction(){
 			show.type="button";
 			show.value="Get Correct Sentence(s)";
 			show.className="btn btn-dark";
-			
+			if(shuffleWords(e,sentence)){
+            imp.innerHTML="Correct Answer";
+            imp.style.color="green";
+        }
+        else{
+            imp.innerHTML="Wrong Answer!";
+            d.append(show);
+            show.style.display="inline-block";
+            imp.style.color="red";
+        }
 			this.style.display="none";
 			d.append(imp);
 			imp.style.display="block";
@@ -226,6 +244,14 @@ function getFunction(){
         document.getElementById("eng-default-note").style.display="none";
     }
 }
+function shuffleWords(array,element){
+    for(i=0;i<array.length;i++){
+        if(array[i]+" "==element){
+            return true;
+        }
+    }
+    return false;
+}
 </script>
-    </body>
+</body>
 </html>
