@@ -10,7 +10,7 @@
     <body>
         <section class="text-center">
         <h1 class="text-success bg-dark">***************</h1>
-        <select id="language" onchange="getFunction()" class=" btn-sm dropdown-toggle">
+        <select id="language" onchange="getFunction()" class=" btn-lg btn-info dropdown-toggle">
             <option value="">-select-</option>
             <option value="ENGLISH">ENGLISH</option>
             <option value="HINDI">HINDI</option>
@@ -85,7 +85,7 @@ function getFunction(){
             first[i].value=c[i];
             first[i].className="btn btn-primary";
             first[i].onclick=function(){
-                g.innerHTML="Formed Sentence(After Selecting words)";
+                g.innerHTML="<b>Formed Sentence(After Selecting words)<b><br>";
                 count+=1;
                 d.append(g);
                 var str=hp.innerHTML;
@@ -192,7 +192,7 @@ function getFunction(){
 			start[i].value=c[i];
 			start[i].className="btn btn-primary";
 			start[i].onclick=function(){
-				g.innerHTML="Formed Sentence(After Selecting words)";
+				g.innerHTML="<b>Formed Sentence(After Selecting words)</b><br>";
 				count+=1;
 				d.append(g);
 				var str=hp.innerHTML;
@@ -218,13 +218,13 @@ function getFunction(){
 			if(shuffleWords(e,sentence)){
             imp.innerHTML="Correct Answer";
             imp.style.color="green";
-        }
-        else{
-            imp.innerHTML="Wrong Answer!";
-            d.append(show);
-            show.style.display="inline-block";
-            imp.style.color="red";
-        }
+			}
+			else{
+				imp.innerHTML="Wrong Answer!";
+				d.append(show);
+				show.style.display="inline-block";
+				imp.style.color="red";
+			}
 			this.style.display="none";
 			d.append(imp);
 			imp.style.display="block";
@@ -251,7 +251,7 @@ function shuffleWords(array,element){
         }
     }
     return false;
-}
+}		
 </script>
 </body>
 </html>
