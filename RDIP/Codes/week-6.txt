@@ -1,0 +1,8 @@
+functionalities in unit-6
+1.we have the knowledge of parts of speech
+2.here we have to use the knowledge of unit4,5
+3.same as unit-4 select the language and then select the sentence.
+4.after that we have to select the each and every part of a speech of word
+5.after hit the submit button
+6.if any wrong answers are there click the show answers button
+7.to hide the answer click hide button 
